@@ -10,13 +10,13 @@
 
  How to uses the Rest API UserRegisters(French Adult)  
  
-   To retrieve all users
+    To retrieve all users
       GET: /api/users
       
-   To retrieve user with a ID
+    To retrieve user with a ID
       GET: /api/users/id 
       
-   To register a user
+    To register a user
       POST:  /api/users
          Constrains :
              -  name :  without special characters 
@@ -27,8 +27,8 @@
              -  gender : M or F
                   
         
-   To update user with a ID
+    To update user with a ID
        PUT /api/users/id
        
-   To Delete user with a ID
+    To Delete user with a ID
       DELETE /api/users/id
