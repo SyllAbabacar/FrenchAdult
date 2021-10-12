@@ -2,6 +2,7 @@ package com.fr.register.model;
 
 import java.util.Date;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
@@ -20,9 +21,8 @@ import lombok.Data;
 public class UserModel {
 
 	private Long id ;
-	
-	@NotEmpty(message = "Le nom est ne doit pas etre vide")
-	@Pattern(regexp = "^[^a-zA-Z0-9 àâäèéêëîïôœùûüÿçÀÂÄÈÉŒÇ]+$", message = "Un nom avec des caractères numériques ou spéciaux n'est pas autorisé")
+	@NotBlank(message = "Le nom est ne doit pas etre vide")
+	@Pattern(regexp = "^[a-zA-Z àâäèéêëîïôœùûüÿçÀÂÄÈÉŒÇ]+$", message = "Un nom avec des caractères numériques ou spéciaux n'est pas autorisé")
 	@Size(min = 3, max = 50, message = "Un nom doit avoir au minimum 3 caractétes et 50 caractéres au maximum")
 	private String name;
 
