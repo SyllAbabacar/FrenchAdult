@@ -1,6 +1,6 @@
 # FrenchAdult
 
- Run the Application
+ How to Run the Application
 
     Spring Boot is compatible with Apache Maven 3.3 or above. If you do not already have Maven installed, you can follow the instructions at maven.apache.org
    
