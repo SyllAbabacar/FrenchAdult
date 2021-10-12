@@ -19,7 +19,8 @@
     To register a user
       POST:  /api/users
          Constrains :
-             -  name :  without special characters 
+             -  name :  without special characters and numerics
+                        between 3 and 50 characters
              -  birthdate > 18
              -  country of residence : france
             *Optional
