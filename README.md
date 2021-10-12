@@ -3,8 +3,9 @@
  Run the Application
 
     Spring Boot is compatible with Apache Maven 3.3 or above. If you do not already have Maven installed, you can follow the instructions at maven.apache.org
-  
-    Run commande : mvn spring-boot:run
+   
+    Open the terminal and go to the project root folder
+    run the commande : mvn spring-boot:run
 
 
  User Registers(French Adult)   Rest API
