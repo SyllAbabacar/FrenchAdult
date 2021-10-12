@@ -1,20 +1,28 @@
 package com.fr.register.config;
 
+import java.util.Arrays;
+
+import javax.servlet.Filter;
+
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.filter.CommonsRequestLoggingFilter;
 
 @Configuration
 public class RequestLoggingFilterConfig {
 
 	@Bean
-	public CommonsRequestLoggingFilter logFilter() {
-		CommonsRequestLoggingFilter filter = new CommonsRequestLoggingFilter();
-		filter.setIncludeQueryString(true);
-		filter.setIncludePayload(true);
-		filter.setMaxPayloadLength(10000);
-		filter.setIncludeHeaders(false);
-		filter.setAfterMessagePrefix("REQUEST DATA : ");
-		return filter;
+	public FilterRegistrationBean registerRequestResponseLoggingFilter() {
+		FilterRegistrationBean registration = new FilterRegistrationBean();
+		registration.setFilter(requestAndResponseLoggingFilter());
+		registration.setUrlPatterns(Arrays.asList("/api/*"));
+		registration.setName("requestResponseLoggingFilter");
+		registration.setOrder(2);
+		return registration;
+	}
+
+	@Bean
+	public Filter requestAndResponseLoggingFilter() {
+		return new RequestAndResponseLoggingFilter();
 	}
 }

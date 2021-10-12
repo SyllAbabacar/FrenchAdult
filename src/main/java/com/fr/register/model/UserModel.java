@@ -6,6 +6,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 import com.fr.register.model.constraints.BirthDate;
 import com.fr.register.model.constraints.CountryOfResidence;
@@ -21,6 +22,8 @@ public class UserModel {
 	private Long id ;
 	
 	@NotEmpty(message = "Le nom est ne doit pas etre vide")
+	@Pattern(regexp = "^[^a-zA-Z0-9 àâäèéêëîïôœùûüÿçÀÂÄÈÉŒÇ]+$", message = "Un nom avec des caractères numériques ou spéciaux n'est pas autorisé")
+	@Size(min = 3, max = 50, message = "Un nom doit avoir au minimum 3 caractétes et 50 caractéres au maximum")
 	private String name;
 
 	@BirthDate(message = "la date de naissance doit être supérieure ou égale à 18(Être adulte)")
