@@ -1,0 +1,744 @@
+2021-10-12 01:15:08.057  INFO 8412 --- [Thread-110] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 01:15:08.058  INFO 8412 --- [Thread-110] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-10-12 01:15:08.263  WARN 8412 --- [Thread-110] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-10-12 01:15:08.263  INFO 8412 --- [Thread-110] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Shutdown initiated...
+2021-10-12 01:15:08.265  INFO 8412 --- [Thread-110] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Shutdown completed.
+2021-10-12 01:15:23.455  WARN 8412 --- [restartedMain] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5003 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2021-10-12 01:15:28.459  INFO 8412 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : Starting FrenchAdultRegisterApplication using Java 1.8.0_211 on MBP-de-Ababacar with PID 8412 (/Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister/target/classes started by syll in /Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister)
+2021-10-12 01:15:28.459  INFO 8412 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : No active profile set, falling back to default profiles: default
+2021-10-12 01:15:28.571  INFO 8412 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-12 01:15:28.577  INFO 8412 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 1 JPA repository interfaces.
+2021-10-12 01:15:28.649  INFO 8412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2021-10-12 01:15:28.649  INFO 8412 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-12 01:15:28.649  INFO 8412 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-12 01:15:28.654  INFO 8412 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-12 01:15:28.654  INFO 8412 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 192 ms
+2021-10-12 01:15:28.662  INFO 8412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-28 - Starting...
+2021-10-12 01:15:28.663  INFO 8412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-28 - Start completed.
+2021-10-12 01:15:28.663  INFO 8412 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:DB_USER'
+2021-10-12 01:15:28.684  INFO 8412 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-12 01:15:28.688  INFO 8412 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-10-12 01:15:28.703  INFO 8412 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-12 01:15:28.703  INFO 8412 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 01:15:28.780  WARN 8412 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-12 01:15:28.897  INFO 8412 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-10-12 01:15:28.904  INFO 8412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2021-10-12 01:15:28.906  INFO 8412 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : Started FrenchAdultRegisterApplication in 20.483 seconds (JVM running for 5059.967)
+2021-10-12 01:15:28.911  INFO 8412 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-10-12 01:15:43.882  INFO 8412 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-12 01:15:43.883  INFO 8412 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-12 01:15:43.884  INFO 8412 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-10-12 01:16:17.871  WARN 8412 --- [http-nio-8082-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.fr.register.model.UserModel> com.fr.register.web.UserControllerAPI.save(com.fr.register.model.UserModel): [Field error in object 'userModel' on field 'phoneNumber': rejected value []; codes [Pattern.userModel.phoneNumber,Pattern.phoneNumber,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userModel.phoneNumber,phoneNumber]; arguments []; default message [phoneNumber],[Ljavax.validation.constraints.Pattern$Flag;@6ff2abe,^(?:(?:\+|00)33|0)\s*[1-9] (?:[\s.-]*\d{2}){4}$]; default message [Numéro incorrecte (Exemple: 00(+)33 7 01 02 03 04)]] ]
+2021-10-12 01:17:56.551  INFO 8412 --- [Thread-114] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 01:17:56.551  INFO 8412 --- [Thread-114] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-10-12 01:17:56.757  WARN 8412 --- [Thread-114] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-10-12 01:17:56.757  INFO 8412 --- [Thread-114] com.zaxxer.hikari.HikariDataSource       : HikariPool-28 - Shutdown initiated...
+2021-10-12 01:17:56.759  INFO 8412 --- [Thread-114] com.zaxxer.hikari.HikariDataSource       : HikariPool-28 - Shutdown completed.
+2021-10-12 01:18:11.943  WARN 8412 --- [restartedMain] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5006 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2021-10-12 01:18:16.948  INFO 8412 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : Starting FrenchAdultRegisterApplication using Java 1.8.0_211 on MBP-de-Ababacar with PID 8412 (/Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister/target/classes started by syll in /Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister)
+2021-10-12 01:18:16.948  INFO 8412 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : No active profile set, falling back to default profiles: default
+2021-10-12 01:18:17.051  INFO 8412 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-12 01:18:17.057  INFO 8412 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 1 JPA repository interfaces.
+2021-10-12 01:18:17.117  INFO 8412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2021-10-12 01:18:17.117  INFO 8412 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-12 01:18:17.117  INFO 8412 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-12 01:18:17.121  INFO 8412 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-12 01:18:17.121  INFO 8412 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 170 ms
+2021-10-12 01:18:17.128  INFO 8412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-29 - Starting...
+2021-10-12 01:18:17.129  INFO 8412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-29 - Start completed.
+2021-10-12 01:18:17.129  INFO 8412 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:DB_USER'
+2021-10-12 01:18:17.148  INFO 8412 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-12 01:18:17.151  INFO 8412 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-10-12 01:18:17.165  INFO 8412 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-12 01:18:17.165  INFO 8412 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 01:18:17.227  WARN 8412 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-12 01:18:17.339  INFO 8412 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-10-12 01:18:17.346  INFO 8412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2021-10-12 01:18:17.349  INFO 8412 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : Started FrenchAdultRegisterApplication in 20.433 seconds (JVM running for 5228.406)
+2021-10-12 01:18:17.353  INFO 8412 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-10-12 01:18:46.400  INFO 8412 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-12 01:18:46.400  INFO 8412 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-12 01:18:46.401  INFO 8412 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-10-12 01:20:25.823  INFO 8412 --- [Thread-118] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 01:20:25.823  INFO 8412 --- [Thread-118] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-10-12 01:20:26.028  WARN 8412 --- [Thread-118] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-10-12 01:20:26.028  INFO 8412 --- [Thread-118] com.zaxxer.hikari.HikariDataSource       : HikariPool-29 - Shutdown initiated...
+2021-10-12 01:20:26.030  INFO 8412 --- [Thread-118] com.zaxxer.hikari.HikariDataSource       : HikariPool-29 - Shutdown completed.
+2021-10-12 01:20:41.183  WARN 8412 --- [restartedMain] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5003 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2021-10-12 01:20:46.186  INFO 8412 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : Starting FrenchAdultRegisterApplication using Java 1.8.0_211 on MBP-de-Ababacar with PID 8412 (/Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister/target/classes started by syll in /Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister)
+2021-10-12 01:20:46.186  INFO 8412 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : No active profile set, falling back to default profiles: default
+2021-10-12 01:20:46.292  INFO 8412 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-12 01:20:46.297  INFO 8412 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 1 JPA repository interfaces.
+2021-10-12 01:20:46.363  INFO 8412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2021-10-12 01:20:46.364  INFO 8412 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-12 01:20:46.364  INFO 8412 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-12 01:20:46.368  INFO 8412 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-12 01:20:46.368  INFO 8412 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 180 ms
+2021-10-12 01:20:46.375  INFO 8412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Starting...
+2021-10-12 01:20:46.376  INFO 8412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Start completed.
+2021-10-12 01:20:46.376  INFO 8412 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:DB_USER'
+2021-10-12 01:20:46.395  INFO 8412 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-12 01:20:46.397  INFO 8412 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-10-12 01:20:46.410  INFO 8412 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-12 01:20:46.410  INFO 8412 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 01:20:46.473  WARN 8412 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-12 01:20:46.579  INFO 8412 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-10-12 01:20:46.586  INFO 8412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2021-10-12 01:20:46.588  INFO 8412 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : Started FrenchAdultRegisterApplication in 20.428 seconds (JVM running for 5377.643)
+2021-10-12 01:20:46.593  INFO 8412 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-10-12 01:21:09.557  INFO 8412 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-12 01:21:09.558  INFO 8412 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-12 01:21:09.559  INFO 8412 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-10-12 01:21:51.818  WARN 8412 --- [http-nio-8082-exec-5] o.s.web.servlet.PageNotFound             : Request method 'DELETE' not supported
+2021-10-12 01:21:51.819  WARN 8412 --- [http-nio-8082-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
+2021-10-12 01:21:56.273  WARN 8412 --- [http-nio-8082-exec-6] o.s.web.servlet.PageNotFound             : Request method 'DELETE' not supported
+2021-10-12 01:21:56.273  WARN 8412 --- [http-nio-8082-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
+2021-10-12 01:22:43.756  WARN 8412 --- [http-nio-8082-exec-8] o.s.web.servlet.PageNotFound             : Request method 'PUT' not supported
+2021-10-12 01:22:43.757  WARN 8412 --- [http-nio-8082-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' not supported]
+2021-10-12 01:25:06.104  INFO 8412 --- [Thread-122] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 01:25:06.104  INFO 8412 --- [Thread-122] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-10-12 01:25:06.309  WARN 8412 --- [Thread-122] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-10-12 01:25:06.310  INFO 8412 --- [Thread-122] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Shutdown initiated...
+2021-10-12 01:25:06.312  INFO 8412 --- [Thread-122] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Shutdown completed.
+2021-10-12 01:25:21.514  WARN 8412 --- [restartedMain] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5004 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2021-10-12 01:25:26.518  INFO 8412 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : Starting FrenchAdultRegisterApplication using Java 1.8.0_211 on MBP-de-Ababacar with PID 8412 (/Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister/target/classes started by syll in /Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister)
+2021-10-12 01:25:26.519  INFO 8412 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : No active profile set, falling back to default profiles: default
+2021-10-12 01:25:26.627  INFO 8412 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-12 01:25:26.632  INFO 8412 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 1 JPA repository interfaces.
+2021-10-12 01:25:26.693  INFO 8412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2021-10-12 01:25:26.694  INFO 8412 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-12 01:25:26.694  INFO 8412 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-12 01:25:26.697  INFO 8412 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-12 01:25:26.697  INFO 8412 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 176 ms
+2021-10-12 01:25:26.705  INFO 8412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-31 - Starting...
+2021-10-12 01:25:26.706  INFO 8412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-31 - Start completed.
+2021-10-12 01:25:26.706  INFO 8412 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:DB_USER'
+2021-10-12 01:25:26.726  INFO 8412 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-12 01:25:26.729  INFO 8412 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-10-12 01:25:26.743  INFO 8412 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-12 01:25:26.744  INFO 8412 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 01:25:26.813  WARN 8412 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-12 01:25:26.926  INFO 8412 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-10-12 01:25:26.934  INFO 8412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2021-10-12 01:25:26.936  INFO 8412 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : Started FrenchAdultRegisterApplication in 20.451 seconds (JVM running for 5657.988)
+2021-10-12 01:25:26.941  INFO 8412 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-10-12 01:25:37.278  INFO 8412 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-12 01:25:37.279  INFO 8412 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-12 01:25:37.280  INFO 8412 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-10-12 01:25:37.302  WARN 8412 --- [http-nio-8082-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.fr.register.model.UserModel com.fr.register.web.UserControllerAPI.update(com.fr.register.model.UserModel,java.lang.Long): [Field error in object 'userModel' on field 'phoneNumber': rejected value [+33 1 23 45 67 89s ]; codes [Pattern.userModel.phoneNumber,Pattern.phoneNumber,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userModel.phoneNumber,phoneNumber]; arguments []; default message [phoneNumber],[Ljavax.validation.constraints.Pattern$Flag;@6ff2abe,^(?:(?:\+|00)33|0)\s*[1-9] (?:[\s.-]*\d{2}){4}$]; default message [Numéro incorrecte (Exemple: 00(+)33 7 01 02 03 04)]] ]
+2021-10-12 01:25:44.459  WARN 8412 --- [http-nio-8082-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.fr.register.model.UserModel com.fr.register.web.UserControllerAPI.update(com.fr.register.model.UserModel,java.lang.Long): [Field error in object 'userModel' on field 'phoneNumber': rejected value [+33 1 23 45 67 89 ]; codes [Pattern.userModel.phoneNumber,Pattern.phoneNumber,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userModel.phoneNumber,phoneNumber]; arguments []; default message [phoneNumber],[Ljavax.validation.constraints.Pattern$Flag;@6ff2abe,^(?:(?:\+|00)33|0)\s*[1-9] (?:[\s.-]*\d{2}){4}$]; default message [Numéro incorrecte (Exemple: 00(+)33 7 01 02 03 04)]] ]
+2021-10-12 01:27:35.386  INFO 8412 --- [Thread-126] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 01:27:35.387  INFO 8412 --- [Thread-126] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-10-12 01:27:35.588  WARN 8412 --- [Thread-126] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-10-12 01:27:35.589  INFO 8412 --- [Thread-126] com.zaxxer.hikari.HikariDataSource       : HikariPool-31 - Shutdown initiated...
+2021-10-12 01:27:35.591  INFO 8412 --- [Thread-126] com.zaxxer.hikari.HikariDataSource       : HikariPool-31 - Shutdown completed.
+2021-10-12 01:27:50.762  WARN 8412 --- [restartedMain] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5006 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2021-10-12 01:27:55.768  INFO 8412 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : Starting FrenchAdultRegisterApplication using Java 1.8.0_211 on MBP-de-Ababacar with PID 8412 (/Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister/target/classes started by syll in /Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister)
+2021-10-12 01:27:55.768  INFO 8412 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : No active profile set, falling back to default profiles: default
+2021-10-12 01:27:55.872  INFO 8412 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-12 01:27:55.877  INFO 8412 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 1 JPA repository interfaces.
+2021-10-12 01:27:55.940  INFO 8412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2021-10-12 01:27:55.941  INFO 8412 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-12 01:27:55.941  INFO 8412 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-12 01:27:55.945  INFO 8412 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-12 01:27:55.945  INFO 8412 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 175 ms
+2021-10-12 01:27:55.952  INFO 8412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Starting...
+2021-10-12 01:27:55.953  INFO 8412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Start completed.
+2021-10-12 01:27:55.953  INFO 8412 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:DB_USER'
+2021-10-12 01:27:55.971  INFO 8412 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-12 01:27:55.973  INFO 8412 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-10-12 01:27:55.987  INFO 8412 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-12 01:27:55.987  INFO 8412 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 01:27:56.052  WARN 8412 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-12 01:27:56.166  INFO 8412 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-10-12 01:27:56.173  INFO 8412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2021-10-12 01:27:56.176  INFO 8412 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : Started FrenchAdultRegisterApplication in 20.448 seconds (JVM running for 5807.224)
+2021-10-12 01:27:56.180  INFO 8412 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-10-12 01:28:18.877  INFO 8412 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-12 01:28:18.877  INFO 8412 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-12 01:28:18.878  INFO 8412 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-10-12 01:28:18.885 ERROR 8412 --- [http-nio-8082-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is javax.validation.ConstraintViolationException: delete.id: L'id de l'utilisateur doit être numérique] with root cause
+
+javax.validation.ConstraintViolationException: delete.id: L'id de l'utilisateur doit être numérique
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:120)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at com.fr.register.web.UserControllerAPI$$EnhancerBySpringCGLIB$$5c5f80f8.delete(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:931)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.fr.register.config.RequestFilter.doFilter(RequestFilter.java:23)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-10-12 01:28:51.021  INFO 8412 --- [Thread-130] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 01:28:51.021  INFO 8412 --- [Thread-130] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-10-12 01:28:51.226  WARN 8412 --- [Thread-130] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-10-12 01:28:51.226  INFO 8412 --- [Thread-130] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Shutdown initiated...
+2021-10-12 01:28:51.229  INFO 8412 --- [Thread-130] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Shutdown completed.
+2021-10-12 01:29:06.384  WARN 8412 --- [restartedMain] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5003 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2021-10-12 01:29:11.386  INFO 8412 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : Starting FrenchAdultRegisterApplication using Java 1.8.0_211 on MBP-de-Ababacar with PID 8412 (/Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister/target/classes started by syll in /Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister)
+2021-10-12 01:29:11.387  INFO 8412 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : No active profile set, falling back to default profiles: default
+2021-10-12 01:29:11.502  INFO 8412 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-12 01:29:11.507  INFO 8412 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 1 JPA repository interfaces.
+2021-10-12 01:29:11.575  INFO 8412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2021-10-12 01:29:11.576  INFO 8412 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-12 01:29:11.576  INFO 8412 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-12 01:29:11.579  INFO 8412 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-12 01:29:11.579  INFO 8412 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 190 ms
+2021-10-12 01:29:11.588  INFO 8412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Starting...
+2021-10-12 01:29:11.589  INFO 8412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Start completed.
+2021-10-12 01:29:11.589  INFO 8412 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:DB_USER'
+2021-10-12 01:29:11.609  INFO 8412 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-12 01:29:11.611  INFO 8412 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-10-12 01:29:11.626  INFO 8412 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-12 01:29:11.626  INFO 8412 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 01:29:11.693  WARN 8412 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-12 01:29:11.809  INFO 8412 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-10-12 01:29:11.817  INFO 8412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2021-10-12 01:29:11.819  INFO 8412 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : Started FrenchAdultRegisterApplication in 20.467 seconds (JVM running for 5882.867)
+2021-10-12 01:29:11.824  INFO 8412 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-10-12 01:30:31.921  INFO 8412 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-12 01:30:31.922  INFO 8412 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-12 01:30:31.923  INFO 8412 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-10-12 01:30:31.929 ERROR 8412 --- [http-nio-8082-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is javax.validation.ConstraintViolationException: delete.id: L'id de l'utilisateur doit être numérique] with root cause
+
+javax.validation.ConstraintViolationException: delete.id: L'id de l'utilisateur doit être numérique
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:120)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at com.fr.register.web.UserControllerAPI$$EnhancerBySpringCGLIB$$5c5f80f8.delete(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:931)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.fr.register.config.RequestFilter.doFilter(RequestFilter.java:23)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-10-12 01:31:13.097  WARN 8412 --- [http-nio-8082-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.fr.register.model.UserModel> com.fr.register.web.UserControllerAPI.save(com.fr.register.model.UserModel): [Field error in object 'userModel' on field 'birthdate': rejected value [Fri Oct 16 00:00:00 GMT 2015]; codes [BirthDate.userModel.birthdate,BirthDate.birthdate,BirthDate.java.util.Date,BirthDate]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userModel.birthdate,birthdate]; arguments []; default message [birthdate]]; default message [la date de naissance doit être supérieure ou égale à 18]] ]
+2021-10-12 01:32:18.723  INFO 8412 --- [Thread-134] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 01:32:18.724  INFO 8412 --- [Thread-134] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-10-12 01:32:18.928  WARN 8412 --- [Thread-134] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-10-12 01:32:18.928  INFO 8412 --- [Thread-134] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Shutdown initiated...
+2021-10-12 01:32:18.930  INFO 8412 --- [Thread-134] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Shutdown completed.
+2021-10-12 01:32:34.108  WARN 8412 --- [restartedMain] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5003 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2021-10-12 01:32:39.111  INFO 8412 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : Starting FrenchAdultRegisterApplication using Java 1.8.0_211 on MBP-de-Ababacar with PID 8412 (/Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister/target/classes started by syll in /Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister)
+2021-10-12 01:32:39.112  INFO 8412 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : No active profile set, falling back to default profiles: default
+2021-10-12 01:32:39.225  INFO 8412 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-12 01:32:39.231  INFO 8412 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 1 JPA repository interfaces.
+2021-10-12 01:32:39.297  INFO 8412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2021-10-12 01:32:39.297  INFO 8412 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-12 01:32:39.297  INFO 8412 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-12 01:32:39.301  INFO 8412 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-12 01:32:39.301  INFO 8412 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 187 ms
+2021-10-12 01:32:39.308  INFO 8412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-34 - Starting...
+2021-10-12 01:32:39.309  INFO 8412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-34 - Start completed.
+2021-10-12 01:32:39.309  INFO 8412 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:DB_USER'
+2021-10-12 01:32:39.328  INFO 8412 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-12 01:32:39.330  INFO 8412 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-10-12 01:32:39.345  INFO 8412 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-12 01:32:39.345  INFO 8412 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 01:32:39.409  WARN 8412 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-12 01:32:39.522  INFO 8412 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-10-12 01:32:39.529  INFO 8412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2021-10-12 01:32:39.532  INFO 8412 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : Started FrenchAdultRegisterApplication in 20.457 seconds (JVM running for 6090.575)
+2021-10-12 01:32:39.536  INFO 8412 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-10-12 01:38:19.778  INFO 8412 --- [Thread-138] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 01:38:19.779  INFO 8412 --- [Thread-138] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-10-12 01:38:19.985  WARN 8412 --- [Thread-138] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-10-12 01:38:19.986  INFO 8412 --- [Thread-138] com.zaxxer.hikari.HikariDataSource       : HikariPool-34 - Shutdown initiated...
+2021-10-12 01:38:19.989  INFO 8412 --- [Thread-138] com.zaxxer.hikari.HikariDataSource       : HikariPool-34 - Shutdown completed.
+2021-10-12 01:38:35.155  WARN 8412 --- [restartedMain] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5002 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2021-10-12 01:38:40.159  INFO 8412 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : Starting FrenchAdultRegisterApplication using Java 1.8.0_211 on MBP-de-Ababacar with PID 8412 (/Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister/target/classes started by syll in /Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister)
+2021-10-12 01:38:40.159  INFO 8412 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : No active profile set, falling back to default profiles: default
+2021-10-12 01:38:40.265  INFO 8412 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-12 01:38:40.270  INFO 8412 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 1 JPA repository interfaces.
+2021-10-12 01:38:40.339  INFO 8412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2021-10-12 01:38:40.339  INFO 8412 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-12 01:38:40.339  INFO 8412 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-12 01:38:40.343  INFO 8412 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-12 01:38:40.343  INFO 8412 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 181 ms
+2021-10-12 01:38:40.350  INFO 8412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-35 - Starting...
+2021-10-12 01:38:40.351  INFO 8412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-35 - Start completed.
+2021-10-12 01:38:40.351  INFO 8412 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:DB_USER'
+2021-10-12 01:38:40.369  INFO 8412 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-12 01:38:40.371  INFO 8412 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-10-12 01:38:40.384  INFO 8412 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-12 01:38:40.384  INFO 8412 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 01:38:40.445  WARN 8412 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-12 01:38:40.552  INFO 8412 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-10-12 01:38:40.559  INFO 8412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2021-10-12 01:38:40.562  INFO 8412 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : Started FrenchAdultRegisterApplication in 20.437 seconds (JVM running for 6451.6)
+2021-10-12 01:38:40.567  INFO 8412 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-10-12 01:41:31.926  INFO 8412 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-12 01:41:31.928  INFO 8412 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-12 01:41:31.929  INFO 8412 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-10-12 01:46:25.762 ERROR 8412 --- [http-nio-8082-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.EmptyResultDataAccessException: No class com.fr.register.entities.User entity with id 3 exists!] with root cause
+
+org.springframework.dao.EmptyResultDataAccessException: No class com.fr.register.entities.User entity with id 3 exists!
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.lambda$deleteById$0(SimpleJpaRepository.java:166)
+	at java.util.Optional.orElseThrow(Optional.java:290)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.deleteById(SimpleJpaRepository.java:165)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:529)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:599)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:163)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at com.sun.proxy.$Proxy343.deleteById(Unknown Source)
+	at com.fr.register.web.UserControllerAPI.delete(UserControllerAPI.java:83)
+	at com.fr.register.web.UserControllerAPI$$FastClassBySpringCGLIB$$ae65e9c3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:123)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at com.fr.register.web.UserControllerAPI$$EnhancerBySpringCGLIB$$5c5f80f8.delete(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:931)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.fr.register.config.RequestFilter.doFilter(RequestFilter.java:23)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-10-12 01:46:53.295  INFO 8412 --- [RMI TCP Connection(119)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2021-10-12 01:46:53.311  INFO 8412 --- [RMI TCP Connection(119)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 01:46:53.312  INFO 8412 --- [RMI TCP Connection(119)-127.0.0.1] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-10-12 01:46:53.518  WARN 8412 --- [RMI TCP Connection(119)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-10-12 01:46:53.518  INFO 8412 --- [RMI TCP Connection(119)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-35 - Shutdown initiated...
+2021-10-12 01:46:53.565  INFO 8412 --- [RMI TCP Connection(119)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-35 - Shutdown completed.
+2021-10-12 01:47:22.791  WARN 17409 --- [restartedMain] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5003 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2021-10-12 01:47:27.796  INFO 17409 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : Starting FrenchAdultRegisterApplication using Java 1.8.0_211 on MBP-de-Ababacar with PID 17409 (/Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister/target/classes started by syll in /Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister)
+2021-10-12 01:47:27.797  INFO 17409 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : No active profile set, falling back to default profiles: default
+2021-10-12 01:47:27.833  INFO 17409 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-10-12 01:47:27.833  INFO 17409 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-10-12 01:47:28.292  INFO 17409 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-12 01:47:28.329  INFO 17409 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 1 JPA repository interfaces.
+2021-10-12 01:47:28.868  INFO 17409 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2021-10-12 01:47:28.878  INFO 17409 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-12 01:47:28.878  INFO 17409 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-12 01:47:28.937  INFO 17409 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-12 01:47:28.937  INFO 17409 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1104 ms
+2021-10-12 01:47:28.970  INFO 17409 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-12 01:47:29.106  INFO 17409 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-12 01:47:29.112  INFO 17409 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:DB_USER'
+2021-10-12 01:47:29.249  INFO 17409 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-12 01:47:29.285  INFO 17409 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-12 01:47:29.379  INFO 17409 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-12 01:47:29.476  INFO 17409 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-10-12 01:47:29.918  INFO 17409 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-12 01:47:29.925  INFO 17409 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 01:47:30.391  WARN 17409 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-12 01:47:31.104  INFO 17409 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-10-12 01:47:31.135  INFO 17409 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2021-10-12 01:47:31.142  INFO 17409 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : Started FrenchAdultRegisterApplication in 23.707 seconds (JVM running for 29.204)
+2021-10-12 01:47:52.509  INFO 17409 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-12 01:47:52.509  INFO 17409 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-12 01:47:52.510  INFO 17409 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-10-12 01:53:11.345  INFO 17409 --- [Thread-8] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 01:53:11.345  INFO 17409 --- [Thread-8] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-10-12 01:53:11.555  WARN 17409 --- [Thread-8] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-10-12 01:53:11.555  INFO 17409 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-12 01:53:11.558  INFO 17409 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-12 18:26:20.977  WARN 25975 --- [restartedMain] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5004 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2021-10-12 18:26:25.982  INFO 25975 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : Starting FrenchAdultRegisterApplication using Java 1.8.0_211 on MBP-de-Ababacar with PID 25975 (/Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister/target/classes started by syll in /Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister)
+2021-10-12 18:26:25.983  INFO 25975 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : No active profile set, falling back to default profiles: default
+2021-10-12 18:26:26.017  INFO 25975 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-10-12 18:26:26.017  INFO 25975 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-10-12 18:26:26.471  INFO 25975 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-12 18:26:26.511  INFO 25975 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interfaces.
+2021-10-12 18:26:27.086  INFO 25975 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2021-10-12 18:26:27.094  INFO 25975 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-12 18:26:27.095  INFO 25975 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-12 18:26:27.150  INFO 25975 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-12 18:26:27.150  INFO 25975 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1133 ms
+2021-10-12 18:26:27.186  INFO 25975 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-12 18:26:27.338  INFO 25975 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-12 18:26:27.345  INFO 25975 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:DB_USER'
+2021-10-12 18:26:27.427 DEBUG 25975 --- [restartedMain] o.s.w.f.CommonsRequestLoggingFilter      : Filter 'logFilter' configured for use
+2021-10-12 18:26:27.517  INFO 25975 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-12 18:26:27.561  INFO 25975 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-12 18:26:27.665  INFO 25975 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-12 18:26:27.773  INFO 25975 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-10-12 18:26:27.916 ERROR 25975 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: The [com.fr.register.entities.User] and [com.fr.register.entity.User] entities share the same JPA entity name: [User] which is not allowed!
+2021-10-12 18:26:27.916  WARN 25975 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.DuplicateMappingException: The [com.fr.register.entities.User] and [com.fr.register.entity.User] entities share the same JPA entity name: [User] which is not allowed!
+2021-10-12 18:26:28.145  WARN 25975 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-10-12 18:26:28.158  INFO 25975 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-12 18:26:28.161  INFO 25975 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-12 18:26:28.163  INFO 25975 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-10-12 18:26:28.190  INFO 25975 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-10-12 18:26:28.205 ERROR 25975 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.DuplicateMappingException: The [com.fr.register.entities.User] and [com.fr.register.entity.User] entities share the same JPA entity name: [User] which is not allowed!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.fr.register.FrenchAdultRegisterApplication.main(FrenchAdultRegisterApplication.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.hibernate.DuplicateMappingException: The [com.fr.register.entities.User] and [com.fr.register.entity.User] entities share the same JPA entity name: [User] which is not allowed!
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.addEntityBinding(InFlightMetadataCollectorImpl.java:314)
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:826)
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:248)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:239)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:282)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 21 common frames omitted
+
+2021-10-12 18:29:44.246  WARN 26239 --- [restartedMain] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5003 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2021-10-12 18:29:49.253  INFO 26239 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : Starting FrenchAdultRegisterApplication using Java 1.8.0_211 on MBP-de-Ababacar with PID 26239 (/Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister/target/classes started by syll in /Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister)
+2021-10-12 18:29:49.254  INFO 26239 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : No active profile set, falling back to default profiles: default
+2021-10-12 18:29:49.293  INFO 26239 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-10-12 18:29:49.293  INFO 26239 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-10-12 18:29:49.765  INFO 26239 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-12 18:29:49.810  INFO 26239 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 1 JPA repository interfaces.
+2021-10-12 18:29:50.311  INFO 26239 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2021-10-12 18:29:50.319  INFO 26239 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-12 18:29:50.319  INFO 26239 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-12 18:29:50.366  INFO 26239 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-12 18:29:50.367  INFO 26239 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1072 ms
+2021-10-12 18:29:50.399  INFO 26239 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-12 18:29:50.544  INFO 26239 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-12 18:29:50.550  INFO 26239 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:DB_USER'
+2021-10-12 18:29:50.627 DEBUG 26239 --- [restartedMain] o.s.w.f.CommonsRequestLoggingFilter      : Filter 'logFilter' configured for use
+2021-10-12 18:29:50.719  INFO 26239 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-12 18:29:50.756  INFO 26239 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-12 18:29:50.851  INFO 26239 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-12 18:29:50.942  INFO 26239 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-10-12 18:29:51.070 ERROR 26239 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: The [com.fr.register.entities.User] and [com.fr.register.entity.User] entities share the same JPA entity name: [User] which is not allowed!
+2021-10-12 18:29:51.071  WARN 26239 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.DuplicateMappingException: The [com.fr.register.entities.User] and [com.fr.register.entity.User] entities share the same JPA entity name: [User] which is not allowed!
+2021-10-12 18:29:51.279  WARN 26239 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-10-12 18:29:51.280  INFO 26239 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-12 18:29:51.282  INFO 26239 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-12 18:29:51.284  INFO 26239 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-10-12 18:29:51.293  INFO 26239 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-10-12 18:29:51.307 ERROR 26239 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.DuplicateMappingException: The [com.fr.register.entities.User] and [com.fr.register.entity.User] entities share the same JPA entity name: [User] which is not allowed!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.fr.register.FrenchAdultRegisterApplication.main(FrenchAdultRegisterApplication.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.hibernate.DuplicateMappingException: The [com.fr.register.entities.User] and [com.fr.register.entity.User] entities share the same JPA entity name: [User] which is not allowed!
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.addEntityBinding(InFlightMetadataCollectorImpl.java:314)
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:826)
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:248)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:239)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:282)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 21 common frames omitted
+
+2021-10-12 18:35:02.334  INFO 26665 --- [main] .f.r.FrenchAdultRegisterApplicationTests : Starting FrenchAdultRegisterApplicationTests using Java 14.0.2 on MBP-de-Ababacar with PID 26665 (started by syll in /Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister)
+2021-10-12 18:35:02.336  INFO 26665 --- [main] .f.r.FrenchAdultRegisterApplicationTests : No active profile set, falling back to default profiles: default
+2021-10-12 18:35:02.893  INFO 26665 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-12 18:35:02.931  INFO 26665 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 1 JPA repository interfaces.
+2021-10-12 18:35:03.348  INFO 26665 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-12 18:35:03.512  INFO 26665 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-12 18:35:03.563  INFO 26665 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-12 18:35:03.603  INFO 26665 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-12 18:35:03.704  INFO 26665 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-12 18:35:03.809  INFO 26665 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-10-12 18:35:04.251  INFO 26665 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-12 18:35:04.257  INFO 26665 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 18:35:04.686  WARN 26665 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-12 18:35:05.351  INFO 26665 --- [main] .f.r.FrenchAdultRegisterApplicationTests : Started FrenchAdultRegisterApplicationTests in 8.331 seconds (JVM running for 9.076)
+2021-10-12 18:35:05.537  INFO 26665 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 18:35:05.537  INFO 26665 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-10-12 18:35:05.539  WARN 26665 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2021-10-12 18:35:05.539 ERROR 26665 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-10-12 18:35:05.539  WARN 26665 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2021-10-12 18:35:05.539 ERROR 26665 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-10-12 18:35:05.540  WARN 26665 --- [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+2021-10-12 18:35:05.540  INFO 26665 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-12 18:35:05.542  INFO 26665 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-12 18:37:45.471  INFO 26902 --- [main] .f.r.FrenchAdultRegisterApplicationTests : Starting FrenchAdultRegisterApplicationTests using Java 14.0.2 on MBP-de-Ababacar with PID 26902 (started by syll in /Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister)
+2021-10-12 18:37:45.474  INFO 26902 --- [main] .f.r.FrenchAdultRegisterApplicationTests : No active profile set, falling back to default profiles: default
+2021-10-12 18:37:46.011  INFO 26902 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-12 18:37:46.050  INFO 26902 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 1 JPA repository interfaces.
+2021-10-12 18:37:46.466  INFO 26902 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-12 18:37:46.637  INFO 26902 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-12 18:37:46.693  INFO 26902 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-12 18:37:46.734  INFO 26902 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-12 18:37:46.838  INFO 26902 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-12 18:37:46.941  INFO 26902 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-10-12 18:37:47.412  INFO 26902 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-12 18:37:47.418  INFO 26902 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 18:37:47.882  WARN 26902 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-12 18:37:48.634  INFO 26902 --- [main] .f.r.FrenchAdultRegisterApplicationTests : Started FrenchAdultRegisterApplicationTests in 8.471 seconds (JVM running for 9.252)
+2021-10-12 18:37:48.825  INFO 26902 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 18:37:48.825  INFO 26902 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-10-12 18:37:48.827  WARN 26902 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2021-10-12 18:37:48.827 ERROR 26902 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-10-12 18:37:48.827  WARN 26902 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2021-10-12 18:37:48.827 ERROR 26902 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-10-12 18:37:48.828  WARN 26902 --- [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+2021-10-12 18:37:48.828  INFO 26902 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-12 18:37:48.830  INFO 26902 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-12 18:38:58.891  WARN 27009 --- [restartedMain] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5006 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2021-10-12 18:39:03.896  INFO 27009 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : Starting FrenchAdultRegisterApplication using Java 1.8.0_211 on MBP-de-Ababacar with PID 27009 (/Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister/target/classes started by syll in /Users/syll/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/FrenchAdultRegister)
+2021-10-12 18:39:03.897  INFO 27009 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : No active profile set, falling back to default profiles: default
+2021-10-12 18:39:03.933  INFO 27009 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-10-12 18:39:03.933  INFO 27009 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-10-12 18:39:04.345  INFO 27009 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-12 18:39:04.381  INFO 27009 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 1 JPA repository interfaces.
+2021-10-12 18:39:04.872  INFO 27009 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2021-10-12 18:39:04.879  INFO 27009 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-12 18:39:04.879  INFO 27009 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-12 18:39:04.923  INFO 27009 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-12 18:39:04.923  INFO 27009 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 989 ms
+2021-10-12 18:39:04.956  INFO 27009 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-12 18:39:05.102  INFO 27009 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-12 18:39:05.110  INFO 27009 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:DB_USER'
+2021-10-12 18:39:05.184 DEBUG 27009 --- [restartedMain] o.s.w.f.CommonsRequestLoggingFilter      : Filter 'logFilter' configured for use
+2021-10-12 18:39:05.260  INFO 27009 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-12 18:39:05.296  INFO 27009 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-12 18:39:05.381  INFO 27009 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-12 18:39:05.464  INFO 27009 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-10-12 18:39:05.901  INFO 27009 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-12 18:39:05.907  INFO 27009 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 18:39:06.305  WARN 27009 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-12 18:39:06.934  INFO 27009 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-10-12 18:39:06.965  INFO 27009 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2021-10-12 18:39:06.972  INFO 27009 --- [restartedMain] c.f.r.FrenchAdultRegisterApplication     : Started FrenchAdultRegisterApplication in 23.425 seconds (JVM running for 28.881)
+2021-10-12 18:40:55.579  INFO 27009 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-12 18:40:55.587  INFO 27009 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-12 18:40:55.588  INFO 27009 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-10-12 18:40:55.599 DEBUG 27009 --- [http-nio-8082-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /api/users/]
+2021-10-12 18:40:55.785 DEBUG 27009 --- [http-nio-8082-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : GET /api/users/]
