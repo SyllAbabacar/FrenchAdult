@@ -8,7 +8,7 @@
     run the commande : mvn spring-boot:run
 
 
- User Registers(French Adult)   Rest API
+ How to uses the Rest API UserRegisters(French Adult)  
  
     // API : GET /api/users pour recupérer tous les utilisateurs 
     
