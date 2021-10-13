@@ -116,14 +116,13 @@ class FrenchAdultRegisterApplicationTests {
 	
 	
 	
-	// Test de l' endpoint DELETE /api/users/id pour  la suppréssion d'un utilisateur via son ID
-			@Test
-		    public void testDeleteUserById() throws Exception {
-				mockMvc.perform(MockMvcRequestBuilders
-			            .delete("/api/users/4")
-			            .contentType(MediaType.APPLICATION_JSON))
-			            .andExpect(status().isOk());
-			            	
-		    }
+	// Test de l' endpoint DELETE /api/users/id pour la suppréssion d'un utilisateur
+	// via son ID
+	@Test
+	public void testDeleteUserById() throws Exception {
+		mockMvc.perform(MockMvcRequestBuilders.delete("/api/users/4").contentType(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk());
+
+	}
 
 }
