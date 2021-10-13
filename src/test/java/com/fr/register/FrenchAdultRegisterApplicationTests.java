@@ -18,10 +18,8 @@ import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilde
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fr.register.dto.UserDto;
 import com.fr.register.entities.Gender;
 import com.fr.register.model.UserModel;
-import com.fr.register.repository.UserRepository;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -30,14 +28,10 @@ class FrenchAdultRegisterApplicationTests {
 	@Autowired
     private MockMvc mockMvc; 
 	
-	@Autowired
-	private UserDto userDto ;
 	
 	@Autowired
     ObjectMapper mapper;
 	
-	@Autowired
-	UserRepository userRepository ;
 	
 	
 	

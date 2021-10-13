@@ -7,7 +7,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.Pattern;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -21,10 +20,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fr.register.dto.UserDto;
 import com.fr.register.exception.UserNotFoundException;
 import com.fr.register.model.UserModel;
-import com.fr.register.repository.UserRepository;
+import com.fr.register.service.UserServiceI;
 
 // Utilisateurs  Rest API /api/
 
@@ -34,59 +32,58 @@ import com.fr.register.repository.UserRepository;
 public class UserControllerAPI {
 
 	@Autowired
-	UserRepository userRepository;
+	UserServiceI userServiceI;
 
-	@Autowired
-	UserDto userDto;
 
-	// API : GET /users pour recupérer tous les utilisateurs 
-
+	// API : GET /users pour recupérer tous les utilisateurs
 	@GetMapping(path = "/users", produces = { MediaType.APPLICATION_JSON_VALUE })
-	public List<UserModel> userList() {
-		return userDto.toModels(userRepository.findAll());
+	public ResponseEntity<List<UserModel>> userList() {
+		return new ResponseEntity<>(userServiceI.getAllUser(), HttpStatus.OK);
 	}
+	
+	
 
 	// API : GET /users/id Pour la récupération d'un utilisateur grace à son ID
-
 	@GetMapping(path = "users/{id}", produces = { MediaType.APPLICATION_JSON_VALUE })
-	public UserModel findUserById(
+	public ResponseEntity<UserModel> findUserById(
 			@PathVariable("id") @Pattern(regexp = "\\d+", message = "L'id de l'utilisateur doit être numérique") String id)
 			throws UserNotFoundException {
 		try {
-			return userDto.toModel(userRepository.findById(Long.valueOf(id)).get());
+			return new ResponseEntity<>(userServiceI.getUserByid(Long.valueOf(id)), HttpStatus.OK);
 		} catch (NoSuchElementException ex) {
 			throw new UserNotFoundException();
 		}
 	}
+	
 
 	// API : POST /users pour la sauvegarde d'un utilisateur
-
 	@PostMapping(path = "/users", consumes = { MediaType.APPLICATION_JSON_VALUE }, produces = {
 			MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<UserModel> save(@Valid @RequestBody UserModel user) {
 
-		UserModel u = userDto.toModel(userRepository.save(userDto.toEntity(user)));
+		UserModel u = userServiceI.saveUser(user);
 		return new ResponseEntity<>(u, HttpStatus.CREATED);
 	}
+	
 
 	// API : PUT /users/id Pour la modification d'un utilisateur grace à son ID
-	
 	@PutMapping(path = "/users/{id}", produces = { MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<UserModel> update(@Valid @RequestBody UserModel user, @PathVariable Long id) {
 		user.setId(id);
-		UserModel u = userDto.toModel(userRepository.save(userDto.toEntity(user)));
-		return new ResponseEntity<>(u, HttpStatus.OK);	}
+		UserModel u = userServiceI.saveUser(user);
+		return new ResponseEntity<>(u, HttpStatus.OK);
+
+	}
 
 	// API : DELETE /users/id Pour la suppression d'un utilisateur grace à son ID
 	@DeleteMapping(path = "users/{id}")
 	public ResponseEntity<String> delete(
-			@PathVariable("id") @Pattern(regexp = "\\d+", message = "L'id de l'utilisateur doit être numérique") String id) throws UserNotFoundException {
-		try {
-			userRepository.deleteById(Long.valueOf(id));
-			return new ResponseEntity<>("Utilisateur Supprimé avec succès", HttpStatus.OK);
-		} catch (EmptyResultDataAccessException ex) {
-			throw new UserNotFoundException();
-		}
+			@PathVariable("id") @Pattern(regexp = "\\d+", message = "L'id de l'utilisateur doit être numérique") String id)
+			throws UserNotFoundException {
+
+		userServiceI.deleteUserById(Long.valueOf(id));
+		return new ResponseEntity<>("Utilisateur Supprimé avec succès", HttpStatus.OK);
+
 	}
 
 }
