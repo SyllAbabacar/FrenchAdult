@@ -72,10 +72,10 @@ public class UserControllerAPI {
 	// API : PUT /users/id Pour la modification d'un utilisateur grace à son ID
 	
 	@PutMapping(path = "/users/{id}", produces = { MediaType.APPLICATION_JSON_VALUE })
-	public UserModel update(@Valid @RequestBody UserModel user, @PathVariable Long id) {
+	public ResponseEntity<UserModel> update(@Valid @RequestBody UserModel user, @PathVariable Long id) {
 		user.setId(id);
-		return userDto.toModel(userRepository.save(userDto.toEntity(user)));
-	}
+		UserModel u = userDto.toModel(userRepository.save(userDto.toEntity(user)));
+		return new ResponseEntity<>(u, HttpStatus.OK);	}
 
 	// API : DELETE /users/id Pour la suppression d'un utilisateur grace à son ID
 	@DeleteMapping(path = "users/{id}")
