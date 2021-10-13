@@ -7,6 +7,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.Pattern;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -78,9 +79,14 @@ public class UserControllerAPI {
 
 	// API : DELETE /users/id Pour la suppression d'un utilisateur grace à son ID
 	@DeleteMapping(path = "users/{id}")
-	public void delete(
-			@PathVariable("id") @Pattern(regexp = "\\d+", message = "L'id de l'utilisateur doit être numérique") String id) {
-		userRepository.deleteById(Long.valueOf(id));
+	public ResponseEntity<String> delete(
+			@PathVariable("id") @Pattern(regexp = "\\d+", message = "L'id de l'utilisateur doit être numérique") String id) throws UserNotFoundException {
+		try {
+			userRepository.deleteById(Long.valueOf(id));
+			return new ResponseEntity<>("Utilisateur Supprimé avec succès", HttpStatus.OK);
+		} catch (EmptyResultDataAccessException ex) {
+			throw new UserNotFoundException();
+		}
 	}
 
 }

@@ -13,11 +13,17 @@ import com.fr.register.model.constraints.BirthDate;
 import com.fr.register.model.constraints.CountryOfResidence;
 import com.fr.register.model.constraints.GenderField;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 //Model de donnée
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class UserModel {
 
 	private Long id ;
