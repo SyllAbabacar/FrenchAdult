@@ -33,3 +33,14 @@
        
     To Delete user with a ID
       DELETE /api/users/id
+      
+ H2 database 
+ 
+    Acces h2 console : localhost:8082/h2-console/ 
+      
+ Logs
+ 
+     All requests and Response are logged 
+     Path of Logs /logs/user_request.log
+     
+       
