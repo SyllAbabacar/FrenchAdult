@@ -58,7 +58,7 @@ public class UserControllerAPI {
 
 	// API : POST /users pour la sauvegarde d'un utilisateur
 	@PostMapping(path = "/users", consumes = { MediaType.APPLICATION_JSON_VALUE }, produces = {
-			MediaType.APPLICATION_JSON_VALUE })
+	MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<UserModel> save(@Valid @RequestBody UserModel user) {
 
 		UserModel u = userServiceI.saveUser(user);

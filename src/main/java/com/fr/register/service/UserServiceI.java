@@ -1,7 +1,6 @@
 package com.fr.register.service;
 
 import java.util.List;
-import java.util.Optional;
 
 import com.fr.register.exception.UserNotFoundException;
 import com.fr.register.model.UserModel;

@@ -3,7 +3,6 @@ package com.fr.register.model;
 import java.util.Date;
 
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
@@ -38,7 +37,8 @@ public class UserModel {
 	private Date birthdate;
 
 	@CountryOfResidence(message = "Le pays de résidence doit être la france")
-	@NotEmpty(message = "Le pays de résidence  est obligatoire")
+	@Pattern(regexp = "^[a-zA-Z àâäèéêëîïôœùûüÿçÀÂÄÈÉŒÇ]+$", message = "Un pays avec des caractères numériques ou spéciaux n'est pas autorisé")
+	@NotBlank(message = "Le pays de résidence  est obligatoire")
 	private String countryOfResidence;
 
 	@Pattern(regexp = "^(?:(?:\\+|00)33|0)\\s*[1-9] (?:[\\s.-]*\\d{2}){4}$", message = "Numéro incorrecte (Exemple: 00(+)33 7 01 02 03 04)")
