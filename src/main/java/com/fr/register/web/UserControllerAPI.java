@@ -49,7 +49,7 @@ public class UserControllerAPI {
 			@PathVariable("id") @Pattern(regexp = "\\d+", message = "L'id de l'utilisateur doit être numérique") String id)
 			throws UserNotFoundException {
 		try {
-			return new ResponseEntity<>(userServiceI.getUserByid(Long.valueOf(id)), HttpStatus.OK);
+			return new ResponseEntity<>(userServiceI.getUserById(Long.valueOf(id)), HttpStatus.OK);
 		} catch (NoSuchElementException ex) {
 			throw new UserNotFoundException();
 		}

@@ -1,12 +1,14 @@
 package com.fr.register.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 import com.fr.register.dto.UserDto;
+import com.fr.register.entities.User;
 import com.fr.register.exception.UserNotFoundException;
 import com.fr.register.model.UserModel;
 import com.fr.register.repository.UserRepository;
@@ -26,8 +28,14 @@ public class UserServiceImpl implements UserServiceI{
 	}
 
 	@Override
-	public UserModel getUserByid(Long id) {
-		return dto.toModel(userRepository.findById(id).get());
+	public UserModel getUserById(Long id) {
+		Optional<User> optionalUser = userRepository.findById(id);
+		if(optionalUser.isPresent()) {
+			return dto.toModel(optionalUser.get());
+
+		}else {
+			return null ;
+		}
 	}
 
 	@Override
@@ -41,6 +49,18 @@ public class UserServiceImpl implements UserServiceI{
 			userRepository.deleteById(id);
 		} catch (EmptyResultDataAccessException ex) {
 			throw new UserNotFoundException();
+		}
+		
+	}
+
+	@Override
+	public UserModel getUserByName(String name) {
+		Optional<User> optionalUser = userRepository.findByName(name);
+		if(optionalUser.isPresent()) {
+			return dto.toModel(optionalUser.get());
+
+		}else {
+			return null ;
 		}
 		
 	}
