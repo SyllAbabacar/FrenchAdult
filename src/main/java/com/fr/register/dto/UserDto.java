@@ -11,10 +11,8 @@ import com.fr.register.model.UserModel;
 
 import lombok.NoArgsConstructor;
 
-
 @NoArgsConstructor
 public class UserDto {
-	
 
 	public User toEntity(UserModel model) {
 		User entity = new User();
@@ -32,7 +30,7 @@ public class UserDto {
 		return entity;
 
 	}
-	
+
 	public UserModel toModel(User entity) {
 		UserModel model = new UserModel();
 		model.setId(entity.getId());
@@ -49,28 +47,27 @@ public class UserDto {
 		return model;
 
 	}
-	
+
 	public List<UserModel> toModels(List<User> entities) {
 		List<UserModel> models = new ArrayList<>();
-		if(!entities.isEmpty()) {
+		if (!entities.isEmpty()) {
 			entities.forEach(e -> {
-				models.add(toModel(e)) ;
+				models.add(toModel(e));
 			});
 		}
 		return models;
 
 	}
 
-	
 	public List<User> toEntities(List<UserModel> models) {
 		List<User> entities = new ArrayList<>();
-		if(!models.isEmpty()) {
+		if (!models.isEmpty()) {
 			models.forEach(e -> {
-				entities.add(toEntity(e)) ;
+				entities.add(toEntity(e));
 			});
 		}
 		return entities;
 
 	}
-	
+
 }
