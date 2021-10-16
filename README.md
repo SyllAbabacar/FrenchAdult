@@ -43,4 +43,8 @@
      All requests and Response are logged 
      Path of Logs /logs/user_request.log
      
+ Swagger : 
+ 
+     http://localhost:8082/swagger-ui.html
+     
        
