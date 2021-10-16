@@ -23,7 +23,7 @@ public class UserDto {
 		entity.setBirthdate(model.getBirthdate());
 		entity.setCountryOfResidence(model.getCountryOfResidence());
 		if (StringUtils.isNotBlank(model.getGender())) {
-			entity.setGender(Gender.valueOf(model.getGender()));
+			entity.setGender(Gender.valueOf(model.getGender().toUpperCase()));
 		} else {
 			entity.setGender(null);
 		}

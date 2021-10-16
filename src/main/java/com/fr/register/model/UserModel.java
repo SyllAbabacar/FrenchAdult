@@ -25,8 +25,8 @@ import lombok.NoArgsConstructor;
 @Builder
 public class UserModel {
 
-	private Long id ;
-	
+	private Long id;
+
 	@NotBlank(message = "Le nom est ne doit pas etre vide")
 	@Pattern(regexp = "^[a-zA-Z àâäèéêëîïôœùûüÿçÀÂÄÈÉŒÇ]+$", message = "Un nom avec des caractères numériques ou spéciaux n'est pas autorisé")
 	@Size(min = 3, max = 50, message = "Un nom doit avoir au minimum 3 caractétes et 50 caractéres au maximum")
@@ -47,9 +47,5 @@ public class UserModel {
 
 	@GenderField(message = "Genre incorrect (Exemple: M ou F)")
 	private String gender;
-
-	
-	
-	
 
 }
