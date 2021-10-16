@@ -9,14 +9,17 @@ import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.annotation.Rollback;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.fr.register.entities.Gender;
 import com.fr.register.entities.User;
 import com.fr.register.repository.UserRepository;
 
+@ExtendWith(SpringExtension.class)
 @DataJpaTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class UserRepositoryTest {
@@ -82,17 +85,13 @@ public class UserRepositoryTest {
     @Rollback(value = false)
     public void deleteUserByIdTest(){
 
-
         userRepository.deleteById(1L);
-
         User user1 = null;
-
         Optional<User> optionalUser = userRepository.findByName("Frank Gomis");
-
+        
         if(optionalUser.isPresent()){
             user1 = optionalUser.get();
         }
-
         Assertions.assertThat(user1).isNull();
     }
 	

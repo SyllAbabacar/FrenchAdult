@@ -12,7 +12,10 @@ import com.fr.register.entities.Gender;
 import com.fr.register.entities.User;
 import com.fr.register.repository.UserRepository;
 
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 @SpringBootApplication
+@EnableSwagger2
 public class FrenchAdultRegisterApplication {
 
 	@Bean

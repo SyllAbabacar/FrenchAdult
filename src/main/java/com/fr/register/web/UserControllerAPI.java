@@ -20,12 +20,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fr.register.exception.UserInvalidRequestException;
 import com.fr.register.exception.UserNotFoundException;
 import com.fr.register.model.UserModel;
 import com.fr.register.service.UserServiceI;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 // Utilisateurs  Rest API /api/
 
+@Api(description ="API for CRUD operations on users.")
 @RequestMapping("/api")
 @RestController
 @Validated
@@ -35,15 +40,14 @@ public class UserControllerAPI {
 	UserServiceI userServiceI;
 
 
-	// API : GET /users pour recupérer tous les utilisateurs
+	@ApiOperation(value = "To retrieve all users")
 	@GetMapping(path = "/users", produces = { MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<List<UserModel>> userList() {
 		return new ResponseEntity<>(userServiceI.getAllUser(), HttpStatus.OK);
 	}
 	
 	
-
-	// API : GET /users/id Pour la récupération d'un utilisateur grace à son ID
+	@ApiOperation(value = "To retrieve user with a ID")
 	@GetMapping(path = "users/{id}", produces = { MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<UserModel> findUserById(
 			@PathVariable("id") @Pattern(regexp = "\\d+", message = "L'id de l'utilisateur doit être numérique") String id)
@@ -56,7 +60,7 @@ public class UserControllerAPI {
 	}
 	
 
-	// API : POST /users pour la sauvegarde d'un utilisateur
+	@ApiOperation(value = "To register a user")
 	@PostMapping(path = "/users", consumes = { MediaType.APPLICATION_JSON_VALUE }, produces = {
 	MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<UserModel> save(@Valid @RequestBody UserModel user) {
@@ -66,23 +70,32 @@ public class UserControllerAPI {
 	}
 	
 
-	// API : PUT /users/id Pour la modification d'un utilisateur grace à son ID
+	@ApiOperation(value = "To update user with a ID")
 	@PutMapping(path = "/users/{id}", produces = { MediaType.APPLICATION_JSON_VALUE })
-	public ResponseEntity<UserModel> update(@Valid @RequestBody UserModel user, @PathVariable Long id) {
+	public ResponseEntity<UserModel> update(@Valid @RequestBody UserModel user, @PathVariable Long id) throws UserNotFoundException {
+		if (user == null || user.getId() == null) {
+	        throw new UserInvalidRequestException("UserModel or ID must not be null!");
+	    }
+		
 		user.setId(id);
-		UserModel u = userServiceI.saveUser(user);
+		UserModel u = userServiceI.updateUserById(id,user);
 		return new ResponseEntity<>(u, HttpStatus.OK);
 
 	}
 
-	// API : DELETE /users/id Pour la suppression d'un utilisateur grace à son ID
+	@ApiOperation(value = "To Delete user with a ID")
 	@DeleteMapping(path = "users/{id}")
 	public ResponseEntity<String> delete(
 			@PathVariable("id") @Pattern(regexp = "\\d+", message = "L'id de l'utilisateur doit être numérique") String id)
 			throws UserNotFoundException {
+			UserModel user = userServiceI.deleteUserById(Long.valueOf(id));
+			if(null != user ) {
+				return new ResponseEntity<>("Utilisateur Supprimé avec succès", HttpStatus.OK);
+			}else {
+				return new ResponseEntity<>("Utilisateur non trouvé", HttpStatus.NOT_FOUND);
 
-		userServiceI.deleteUserById(Long.valueOf(id));
-		return new ResponseEntity<>("Utilisateur Supprimé avec succès", HttpStatus.OK);
+			}
+
 
 	}
 

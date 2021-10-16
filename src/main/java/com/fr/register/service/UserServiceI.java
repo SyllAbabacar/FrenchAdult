@@ -2,6 +2,7 @@ package com.fr.register.service;
 
 import java.util.List;
 
+import com.fr.register.entities.User;
 import com.fr.register.exception.UserNotFoundException;
 import com.fr.register.model.UserModel;
 
@@ -13,8 +14,10 @@ public interface UserServiceI {
 	
 	public UserModel saveUser(UserModel model) ;
 	
-	public void deleteUserById(Long id) throws UserNotFoundException ;
+	public UserModel deleteUserById(Long id) throws UserNotFoundException ;
 
 	public UserModel getUserByName(String name);
+
+	UserModel updateUserById(Long id, UserModel user) throws UserNotFoundException;
 
 }

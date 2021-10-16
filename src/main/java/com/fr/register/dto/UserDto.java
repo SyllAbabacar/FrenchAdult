@@ -61,4 +61,16 @@ public class UserDto {
 
 	}
 
+	
+	public List<User> toEntities(List<UserModel> models) {
+		List<User> entities = new ArrayList<>();
+		if(!models.isEmpty()) {
+			models.forEach(e -> {
+				entities.add(toEntity(e)) ;
+			});
+		}
+		return entities;
+
+	}
+	
 }
