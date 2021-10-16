@@ -50,7 +50,7 @@ public class UserControllerAPI {
 	@ApiOperation(value = "To retrieve user with a ID")
 	@GetMapping(path = "users/{id}", produces = { MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<UserModel> findUserById(
-			@PathVariable("id") @Pattern(regexp = "\\d+", message = "L'id de l'utilisateur doit être numérique") String id)
+			@PathVariable("id") @Pattern(regexp = "\\d+", message = "User ID must be numeric") String id)
 			throws UserNotFoundException {
 		try {
 			return new ResponseEntity<>(userServiceI.getUserById(Long.valueOf(id)), HttpStatus.OK);
@@ -86,13 +86,13 @@ public class UserControllerAPI {
 	@ApiOperation(value = "To Delete user with a ID")
 	@DeleteMapping(path = "users/{id}")
 	public ResponseEntity<String> delete(
-			@PathVariable("id") @Pattern(regexp = "\\d+", message = "L'id de l'utilisateur doit être numérique") String id)
+			@PathVariable("id") @Pattern(regexp = "\\d+", message = "User ID must be numeric") String id)
 			throws UserNotFoundException {
 			UserModel user = userServiceI.deleteUserById(Long.valueOf(id));
 			if(null != user ) {
-				return new ResponseEntity<>("Utilisateur Supprimé avec succès", HttpStatus.OK);
+				return new ResponseEntity<>("User successfully Deleted", HttpStatus.OK);
 			}else {
-				return new ResponseEntity<>("Utilisateur non trouvé", HttpStatus.NOT_FOUND);
+				return new ResponseEntity<>("User not found", HttpStatus.NOT_FOUND);
 
 			}
 

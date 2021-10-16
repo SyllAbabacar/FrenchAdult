@@ -27,25 +27,25 @@ public class UserModel {
 
 	private Long id;
 
-	@NotBlank(message = "Le nom est ne doit pas etre vide")
-	@Pattern(regexp = "^[a-zA-Z àâäèéêëîïôœùûüÿçÀÂÄÈÉŒÇ]+$", message = "Un nom avec des caractères numériques ou spéciaux n'est pas autorisé")
-	@Size(min = 3, max = 50, message = "Un nom doit avoir au minimum 3 caractétes et 50 caractéres au maximum")
+	@NotBlank(message = "The name must not be empty")
+	@Pattern(regexp = "^[a-zA-Z àâäèéêëîïôœùûüÿçÀÂÄÈÉŒÇ]+$", message = "A name with numeric or special characters is not allowed")
+	@Size(min = 3, max = 50, message = "A name must have a minimum of 3 characters and a maximum of 50 characters")
 	private String name;
 
-	@BirthDate(message = "la date de naissance doit être supérieure ou égale à 18(Être adulte)")
-	@Past(message = "La date de naissance doit être dans le passé.")
+	@BirthDate(message = "The birthdate must be greater than or equal to 18 (Only adult)")
+	@Past(message = "The birthdate must be in the past ")
 	@NotNull(message = "La date de naissance est obligatoire")
 	private Date birthdate;
 
-	@CountryOfResidence(message = "Le pays de résidence doit être la france")
-	@Pattern(regexp = "^[a-zA-Z àâäèéêëîïôœùûüÿçÀÂÄÈÉŒÇ]+$", message = "Un pays avec des caractères numériques ou spéciaux n'est pas autorisé")
-	@NotBlank(message = "Le pays de résidence  est obligatoire")
+	@CountryOfResidence(message = "The country of residence must be France")
+	@Pattern(regexp = "^[a-zA-Z àâäèéêëîïôœùûüÿçÀÂÄÈÉŒÇ]+$", message = "A country with numeric or special characters is not allowed")
+	@NotBlank(message = "Country of residence is required")
 	private String countryOfResidence;
 
-	@Pattern(regexp = "^(?:(?:\\+|00)33|0)\\s*[1-9] (?:[\\s.-]*\\d{2}){4}$", message = "Numéro incorrecte (Exemple: 00(+)33 7 01 02 03 04)")
+	@Pattern(regexp = "^(?:(?:\\+|00)33|0)\\s*[1-9] (?:[\\s.-]*\\d{2}){4}$", message = "Incorrect number (Example: 00(+)33 7 01 02 03 04)")
 	private String phoneNumber;
 
-	@GenderField(message = "Genre incorrect (Exemple: M ou F)")
+	@GenderField(message = "Incorrect gender (Example: M or F)")
 	private String gender;
 
 }

@@ -17,7 +17,7 @@ import javax.validation.Payload;
 @Retention(RUNTIME)
 @Documented
 public @interface CountryOfResidence {
-	String message() default "La pays de residence";
+	String message() default "Country of residence";
 	  Class <?> [] groups() default {};
 	  Class <? extends Payload> [] payload() default {};
 
