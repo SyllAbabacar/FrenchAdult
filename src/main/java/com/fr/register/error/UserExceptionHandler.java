@@ -45,7 +45,7 @@ public class UserExceptionHandler extends ResponseEntityExceptionHandler {
 	@Override
 	protected ResponseEntity<Object> handleHttpMessageNotReadable(HttpMessageNotReadableException ex,
 			HttpHeaders headers, HttpStatus status, WebRequest request) {
-		String error = "Verifier les données saisies";
+		String error = "Checking the entered data";
 		return buildResponseEntity(new ApiError(HttpStatus.BAD_REQUEST, error, ex.getMessage()));
 	}
 
