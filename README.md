@@ -6,6 +6,9 @@
     
     Open the terminal and go to the project root folder
     run the commande : mvn spring-boot:run
+    
+    Run the test
+    Run the commande : mvn test
 
 
  How to uses the Rest API UserRegisters(French Adult)  
