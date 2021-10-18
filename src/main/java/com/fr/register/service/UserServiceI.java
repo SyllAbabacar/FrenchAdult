@@ -11,12 +11,14 @@ public interface UserServiceI {
 	
 	public UserModel getUserById(Long id) ;
 	
-	public UserModel saveUser(UserModel model) ;
+	public UserModel saveUser(UserModel model)   ;
 	
 	public UserModel deleteUserById(Long id) throws UserNotFoundException ;
 
 	public UserModel getUserByName(String name);
 
 	UserModel updateUserById(Long id, UserModel user) throws UserNotFoundException;
+
+	UserModel getUserByPhoneNumber(String numberPhone);
 
 }

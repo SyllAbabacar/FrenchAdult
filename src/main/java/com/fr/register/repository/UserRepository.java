@@ -11,6 +11,9 @@ import com.fr.register.entities.User;
 public interface UserRepository extends JpaRepository<User, Long> {
 
 	Optional<User> findByName(String string);
+	
+	Optional<User> findByPhoneNumber(String string);
+
 
 
 }

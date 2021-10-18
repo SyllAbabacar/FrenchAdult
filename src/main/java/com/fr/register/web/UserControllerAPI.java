@@ -6,6 +6,7 @@ import java.util.NoSuchElementException;
 import javax.validation.Valid;
 import javax.validation.constraints.Pattern;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -63,10 +64,24 @@ public class UserControllerAPI {
 	@ApiOperation(value = "To register a user")
 	@PostMapping(path = "/users", consumes = { MediaType.APPLICATION_JSON_VALUE }, produces = {
 	MediaType.APPLICATION_JSON_VALUE })
-	public ResponseEntity<UserModel> save(@Valid @RequestBody UserModel user) {
+	public ResponseEntity<Object> save(@Valid @RequestBody UserModel user)  {
+ 
+		// Check Number phone 
+		if(StringUtils.isNotBlank(user.getPhoneNumber())) {
+			UserModel temp = userServiceI.getUserByPhoneNumber(user.getPhoneNumber());
+			if(null == temp) {
+				UserModel u = userServiceI.saveUser(user);
+				return new ResponseEntity<>(u, HttpStatus.CREATED);
 
-		UserModel u = userServiceI.saveUser(user);
-		return new ResponseEntity<>(u, HttpStatus.CREATED);
+			}else {
+				return new ResponseEntity<>("This number is already registered", HttpStatus.NOT_ACCEPTABLE);
+
+			}
+
+		}else {
+			return new ResponseEntity<>("Please inquire a phone number", HttpStatus.CREATED);
+
+		}
 	}
 	
 

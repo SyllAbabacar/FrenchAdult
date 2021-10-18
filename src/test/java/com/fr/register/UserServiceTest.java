@@ -16,6 +16,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Validator;
+
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -43,6 +45,9 @@ public class UserServiceTest {
 	
 	@Mock
 	UserRepository repository ;
+	
+	@Mock
+    Validator validator;
 	
 	
 	UserDto dto = new UserDto() ;

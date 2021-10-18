@@ -33,13 +33,13 @@ public class FrenchAdultRegisterApplication {
 		return args -> {
 			LocalDate localDate = LocalDate.of(1995, 02, 20);
 			userRepository.save(new User(null, "Faty Syll", java.sql.Date.valueOf(localDate), "France",
-					"+33 1 23 45 67 89", Gender.F));
+					"+33 1 23 45 61 89", Gender.F));
 			localDate = LocalDate.of(1997, 10, 20);
 			userRepository.save(new User(null, "Modou Ndiaye", java.sql.Date.valueOf(localDate), "France",
-					"+33 1 23 45 67 89", Gender.M));
+					"+33 1 23 43 67 88", Gender.M));
 			localDate = LocalDate.of(1990, 04, 16);
 			userRepository.save(new User(null, "Massamba Diop", java.sql.Date.valueOf(localDate), "France",
-					"+33 1 23 45 67 89", Gender.M));
+					"+33 1 23 65 67 98", Gender.M));
 
 		};
 
