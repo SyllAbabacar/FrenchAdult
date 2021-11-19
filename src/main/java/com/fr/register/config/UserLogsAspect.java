@@ -6,8 +6,10 @@ import java.util.Date;
 import javax.servlet.http.HttpServletRequest;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -30,21 +32,40 @@ public class UserLogsAspect {
 
 	}
 
+	@Around("@annotation(com.fr.register.config.TrackingExecutionTime)")
+	public Object executionTime(ProceedingJoinPoint point) throws Throwable {
+
+		long startTime = System.currentTimeMillis();
+
+		Object object = point.proceed();
+
+		long endtime = System.currentTimeMillis();
+
+		logger.info("execution time : " + (endtime - startTime) + "ms");
+
+		return object;
+	}
+
 	@Before("pointCut()")
 	public void beforeMethod(JoinPoint joinPoint) {
+
 		ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes) RequestContextHolder
 				.getRequestAttributes();
+
 		if (null != servletRequestAttributes) {
+
 			HttpServletRequest request = servletRequestAttributes.getRequest();
 
-			// Get the parameter information to be printed
+			// Get the parameter information to be printed String requestURI =
 			String requestURI = request.getRequestURI();
+
 			String method = request.getMethod();
+
 			String remoteAddr = request.getRemoteAddr();
+
 			String jsonString = JSON.toJSONString(joinPoint.getArgs());
 
-			// Print information
-			logger.info("---------- REQUEST --------");
+			// Print information logger.info("---------- REQUEST --------");
 			logger.info("request time: {}", new SimpleDateFormat("yyyy MM DD HH: mm: SS").format(new Date()));
 			logger.info("remoteAddr: {} ", remoteAddr);
 			logger.info("requestURI : {}", requestURI);
@@ -61,6 +82,7 @@ public class UserLogsAspect {
 
 	// Define the method to get the value returned by the accessed Controller and
 	// print it in the log
+
 	@AfterReturning(returning = "result", pointcut = "pointCut()")
 	public void doAfterReturning(Object result) {
 		logger.info("----------- RESPONSE ---------------");

@@ -60,6 +60,7 @@ class FrenchAdultRegisterApplicationTests {
 	
 	@BeforeEach
     public void setUp() {
+		
 		ZoneId defaultZoneId = ZoneId.systemDefault();
 		LocalDate localDate = LocalDate.of(1992, 2, 19);
 		Date date = Date.from(localDate.atStartOfDay(defaultZoneId).toInstant());

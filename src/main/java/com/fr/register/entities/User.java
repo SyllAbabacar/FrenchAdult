@@ -34,19 +34,25 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	
+	
 	@NotBlank(message = "The name must not be empty")
 	@Column(name = "NAME", length = 50 )
 	private String name;
+	
 
 	@Column(name = "BIRTHDATE")
 	@Temporal(TemporalType.DATE)
 	private Date birthdate;
+	
 
 	@Column(name = "COUNTRY_OF_RESIDENCE", length = 40)
 	private String countryOfResidence;
+	
 
 	@Column(name = "PHONE_NUMBER", length = 25, nullable = true)
 	private String phoneNumber;
+	
 
 	@Column(name = "GENDER", length = 2, nullable = true)
 	@Enumerated(EnumType.STRING)

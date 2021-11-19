@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fr.register.config.TrackingExecutionTime;
 import com.fr.register.exception.UserInvalidRequestException;
 import com.fr.register.exception.UserNotFoundException;
 import com.fr.register.model.UserModel;
@@ -43,33 +44,56 @@ public class UserControllerAPI {
 
 	@ApiOperation(value = "To retrieve all users")
 	@GetMapping(path = "/users", produces = { MediaType.APPLICATION_JSON_VALUE })
+	@TrackingExecutionTime
 	public ResponseEntity<List<UserModel>> userList() {
+		
 		return new ResponseEntity<>(userServiceI.getAllUser(), HttpStatus.OK);
 	}
 	
 	
 	@ApiOperation(value = "To retrieve user with a ID")
 	@GetMapping(path = "users/{id}", produces = { MediaType.APPLICATION_JSON_VALUE })
+	@TrackingExecutionTime
 	public ResponseEntity<UserModel> findUserById(
-			@PathVariable("id") @Pattern(regexp = "\\d+", message = "User ID must be numeric") String id)
+			@PathVariable("id") 
+			@Pattern(regexp = "\\d+", message = "User ID must be numeric") String id)
 			throws UserNotFoundException {
 		try {
-			return new ResponseEntity<>(userServiceI.getUserById(Long.valueOf(id)), HttpStatus.OK);
+			
+			UserModel model = userServiceI.getUserById(Long.valueOf(id));
+			if(null != model) {
+				return new ResponseEntity<>(model, HttpStatus.OK);
+
+			}else {
+				
+				return new ResponseEntity<>(model, HttpStatus.NOT_FOUND);
+			}
+			
 		} catch (NoSuchElementException ex) {
+			
 			throw new UserNotFoundException();
 		}
 	}
+	
+	
 	
 
 	@ApiOperation(value = "To register a user")
 	@PostMapping(path = "/users", consumes = { MediaType.APPLICATION_JSON_VALUE }, produces = {
 	MediaType.APPLICATION_JSON_VALUE })
+	@TrackingExecutionTime
 	public ResponseEntity<Object> save(@Valid @RequestBody UserModel user)  {
  
 		// Check Number phone 
-		if(StringUtils.isNotBlank(user.getPhoneNumber())) {
-			UserModel temp = userServiceI.getUserByPhoneNumber(user.getPhoneNumber());
+			UserModel temp = null ;
+			
+			if(StringUtils.isNotBlank(user.getPhoneNumber())) {
+				
+				 temp = userServiceI.getUserByPhoneNumber(user.getPhoneNumber());
+			}
+			
 			if(null == temp) {
+				
 				UserModel u = userServiceI.saveUser(user);
 				return new ResponseEntity<>(u, HttpStatus.CREATED);
 
@@ -78,36 +102,45 @@ public class UserControllerAPI {
 
 			}
 
-		}else {
-			return new ResponseEntity<>("Please inquire a phone number", HttpStatus.CREATED);
-
-		}
+		
 	}
 	
 
 	@ApiOperation(value = "To update user with a ID")
 	@PutMapping(path = "/users/{id}", produces = { MediaType.APPLICATION_JSON_VALUE })
-	public ResponseEntity<UserModel> update(@Valid @RequestBody UserModel user, @PathVariable Long id) throws UserNotFoundException {
-		if (user == null || user.getId() == null) {
+	@TrackingExecutionTime
+	public ResponseEntity<Object> update(@Valid @RequestBody UserModel user, @PathVariable Long id) throws UserNotFoundException, UserInvalidRequestException {
+		
+		if (user == null || (id == null && user.getId() == null)) {
+			
 	        throw new UserInvalidRequestException("UserModel or ID must not be null!");
 	    }
 		
 		user.setId(id);
+		
 		UserModel u = userServiceI.updateUserById(id,user);
+		
 		return new ResponseEntity<>(u, HttpStatus.OK);
 
 	}
+	
+	
 
 	@ApiOperation(value = "To Delete user with a ID")
 	@DeleteMapping(path = "users/{id}")
+	@TrackingExecutionTime
 	public ResponseEntity<String> delete(
 			@PathVariable("id") @Pattern(regexp = "\\d+", message = "User ID must be numeric") String id)
 			throws UserNotFoundException {
+		
 			UserModel user = userServiceI.deleteUserById(Long.valueOf(id));
+			
 			if(null != user ) {
+				
 				return new ResponseEntity<>("User successfully Deleted", HttpStatus.OK);
 			}else {
-				return new ResponseEntity<>("User not found", HttpStatus.NOT_FOUND);
+				
+				throw new UserNotFoundException() ;
 
 			}
 

@@ -30,7 +30,9 @@ public class UserRepositoryTest {
 	@Test
     @Order(1)
 	public void saveUserTest() {
-		LocalDate localDate = LocalDate.of(1992,2,19);   
+		
+		LocalDate localDate = LocalDate.of(1992,2,19); 
+		
 		User user = User.builder()
 				.name("Frank Mendy")
 				.birthdate(java.sql.Date.valueOf(localDate))
@@ -38,6 +40,7 @@ public class UserRepositoryTest {
 				.phoneNumber("+33 1 23 45 67 89")
 				.gender(Gender.F)
 				.build();
+		
 		User u = userRepository.save(user) ;
 		
 		 Assertions.assertThat(u.getName()).isEqualTo("Frank Mendy") ;
@@ -86,12 +89,16 @@ public class UserRepositoryTest {
     public void deleteUserByIdTest(){
 
         userRepository.deleteById(1L);
+        
         User user1 = null;
+        
         Optional<User> optionalUser = userRepository.findByName("Frank Gomis");
         
         if(optionalUser.isPresent()){
+        	
             user1 = optionalUser.get();
         }
+        
         Assertions.assertThat(user1).isNull();
     }
 	

@@ -11,6 +11,7 @@ import javax.validation.Validator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.fr.register.config.TrackingExecutionTime;
 import com.fr.register.dto.UserDto;
 import com.fr.register.entities.User;
 import com.fr.register.exception.UserNotFoundException;
@@ -21,6 +22,8 @@ import com.fr.register.repository.UserRepository;
 public class UserServiceImpl implements UserServiceI {
 
 	private UserRepository userRepository;
+	
+	UserDto dto = new UserDto();
 
 	@Autowired
 	public void setUserRepository(UserRepository userRepository) {
@@ -34,9 +37,10 @@ public class UserServiceImpl implements UserServiceI {
 		this.validator = validator;
 	}
 
-	UserDto dto = new UserDto();
+	
 
 	@Override
+	@TrackingExecutionTime
 	public List<UserModel> getAllUser() {
 		List<User> userList = userRepository.findAll();
 
@@ -44,6 +48,7 @@ public class UserServiceImpl implements UserServiceI {
 	}
 
 	@Override
+	@TrackingExecutionTime
 	public UserModel getUserById(Long id) {
 		Optional<User> optionalUser = userRepository.findById(id);
 		if (optionalUser.isPresent()) {
@@ -55,6 +60,7 @@ public class UserServiceImpl implements UserServiceI {
 	}
 
 	@Override
+	@TrackingExecutionTime
 	public UserModel saveUser(UserModel model) {
 		User userEntity = dto.toEntity(model);
 		Set<ConstraintViolation<User>> violations = validator.validate(userEntity);
@@ -72,21 +78,33 @@ public class UserServiceImpl implements UserServiceI {
 	}
 
 	@Override
+	@TrackingExecutionTime
 	public UserModel updateUserById(Long id, UserModel user) throws UserNotFoundException {
+		
 		userRepository.findById(id).orElseThrow(() -> new UserNotFoundException(id));
+		
 		user.setId(id);
+		
 		return dto.toModel(userRepository.save(dto.toEntity(user)));
 	}
 
 	@Override
+	@TrackingExecutionTime
 	public UserModel deleteUserById(Long id) throws UserNotFoundException {
 
 		UserModel user = null;
+		
 		user = getUserById(id);
+		
 		if (null != user) {
+			
 			userRepository.deleteById(id);
+			
 			return user;
-		} else {
+			
+		} 
+		else {
+			
 			return user;
 		}
 
@@ -98,7 +116,8 @@ public class UserServiceImpl implements UserServiceI {
 		if (optionalUser.isPresent()) {
 			return dto.toModel(optionalUser.get());
 
-		} else {
+		} 
+		else {
 			return null;
 		}
 
@@ -110,7 +129,8 @@ public class UserServiceImpl implements UserServiceI {
 		if (optionalUser.isPresent()) {
 			return dto.toModel(optionalUser.get());
 
-		} else {
+		} 
+		else {
 			return null;
 		}
 
