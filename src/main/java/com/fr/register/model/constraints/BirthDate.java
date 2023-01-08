@@ -17,8 +17,11 @@ import javax.validation.Payload;
 @Retention(RUNTIME)
 @Documented
 public @interface BirthDate {
-	String message() default "La date de naissance";
-	  Class <?> [] groups() default {};
-	  Class <? extends Payload> [] payload() default {};
+
+	String message() default "The birthdate";
+
+	Class<?>[] groups() default {};
+
+	Class<? extends Payload>[] payload() default {};
 
 }

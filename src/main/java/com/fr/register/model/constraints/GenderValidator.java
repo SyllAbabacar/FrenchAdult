@@ -14,7 +14,7 @@ public class GenderValidator implements ConstraintValidator<GenderField, String>
 		boolean result = false;
 		if(StringUtils.isNotBlank(valueToValidate)) {
 			for(Gender genre : Gender.values()) {
-				if(genre.getGenre().equalsIgnoreCase(valueToValidate)) {
+				if(genre.getGenre().equals(valueToValidate.toUpperCase())) {
 					result = true ;
 				}
 			}
